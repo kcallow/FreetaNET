@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <style>
+        .centered {
+          position: fixed;
+          top: 45%;
+          left: 50%;
+          /* bring your own prefixes */
+          transform: translate(-35%, -50%);
+        }
+        input {
+            top: 50%;
+            left: 50%;
+            margin: 14px;
+            margin-left:-12%;
+            width: 90%;
+            font-size: 36px;
+        }
+        button {
+            width: 33%;
+            font-size: 24px;
+            border: none;
+            padding: 10px;
+        }
+    </style>
+    <head>
+        <title>ﾌﾘｰﾀｰﾈｯﾄ「pay2obey」</title>
+        <link rel="shortcut icon" type="image/png" href="./cat.png"/>
+    </head>
+    <body>
+        <div class="centered">
+            <img width=68% src="./freeta-logo.png">
+            <form id="search" name="search" method="get">
+                <input type="text" id="q" name="q" placeholder="欲しい">
+                <button type="submit" id="work" name="t" value="work">仕事</button>
+                <button type="submit" id="hire" name="t" value="hire">雇う</button>
+            </form>
+        </div>
+        
+    </body>
+</html>
