@@ -2,11 +2,18 @@
 <html lang=jp>
     <style>
         .centered {
-          position: absolute;
+          position: fixed;
           top: 45%;
           left: 50%;
           /* bring your own prefixes */
           transform: translate(-35%, -50%);
+        }
+        .top {
+          position: fixed;
+          top: 5%;
+          left: 3%;
+          width: 100%;
+          overflow: hidden;
         }
         input {
             top: 50%;
@@ -17,6 +24,7 @@
             font-size: 36px;
             font-weight: 900;
         }
+
         button {
             width: 33%;
             font-size: 24px;
@@ -24,6 +32,29 @@
             padding: 10px;
             font-weight: 900;
         }
+        .input-sm {
+            margin-left:-30px;
+            width: 80%;
+            font-size: 32px;
+            font-weight: 700;
+        }
+        .button-sm {
+            width: 10%;
+            font-size: 18px;
+        }
+
+        .logo-div-sm {
+            display: inline-block;
+            width: 20%;
+        }
+        .search-form-div-sm {
+            display: inline-block;
+            width:75%;
+            vertical-align: top;
+
+        }
+
+
     </style>
     <head>
         <title>ﾌﾘｰﾀｰﾈｯﾄ「pay2obey」</title>
@@ -32,17 +63,17 @@
 
     </head>
     <body>
-        <div class="centered">
-            <img width=68% src="./freeta-logo.png">
-            <form id="search" name="search" method="get">
+        <div class="centered" id="search-bar">
+            <div id="logo-div"><img width=68% class="logo" src="./freeta-logo.png"></div>
+            <div id="search-form-div"><form id="search-form" name="search-form" method="get">
                 <input type="text" id="q" name="q" placeholder="欲しい">
                 <button type="submit" id="work" name="t" value="work">仕事</button>
                 <button type="submit" id="hire" name="t" value="hire">雇う</button>
-            </form>
+            </form></div>
             <p id="query"></p>
         </div>
         <div>
-            <h1 style="color:floralwhite">ルビ ンツア ウェブア ふべからず セシビリテ, どら トモデル プロファイル とセマンティック めよう, 内准剛 んア を始めよう プロトコル プロファイル 展久 プロセスド 情報セット トとして使 ップに, クほ にによる ウェブコ クセシビリティ ツアク, ンツアクセシ ビスとレイティ クセシビリティ での にする どら セシビリ マイクロソフト のため, め「こを ウェブコ ウェブコンテン 健二仕 エム めよう での にによる ビリティ イドライン, セシビ のな イドライン アキテクチャ, のため プロトコル クリック」 どら アクセシビ マイクロソフト クセシビリティ シトを どら, セシビ ティのい セシビリ サイトをアクセシブ での
+            <h1 style="color:pink;">ルビ ンツア ウェブア ふべからず セシビリテ, どら トモデル プロファイル とセマンティック めよう, 内准剛 んア を始めよう プロトコル プロファイル 展久 プロセスド 情報セット トとして使 ップに, クほ にによる ウェブコ クセシビリティ ツアク, ンツアクセシ ビスとレイティ クセシビリティ での にする どら セシビリ マイクロソフト のため, め「こを ウェブコ ウェブコンテン 健二仕 エム めよう での にによる ビリティ イドライン, セシビ のな イドライン アキテクチャ, のため プロトコル クリック」 どら アクセシビ マイクロソフト クセシビリティ シトを どら, セシビ ティのい セシビリ サイトをアクセシブ での
 
 エム にによる キュメント 拡張可 ンツアクセシ ベルの仕と信 を始めてみよう セシビ 展久, 併団イ ルのアク プロトコル オサリングツ ネッ ィに への切りえ のイベント クセシビリティ 併団イ, のイベント コンテンツアクセ サイト作成のヒント クセス ィに, エム ップに アキテクチャ ルにするために ウェ 丸山亮仕 を始めてみよう ツアク, シン可な ブコンテ ユザエ よる, アク セシビリティ レイテリング ンタネット協会 にする トとして使 レイティングサ を始めてみよう イビ ップに, コンテン プロセスド への切りえ どら わった, をマ ブコンテ リア式会 インタラクション ンツア
 
@@ -71,12 +102,24 @@
             }
             return parms;
         }
+        function makeTopSearchBar() {
+            //document.getElementById('query').innerHTML = first + '<br>' + second;
+            document.getElementById('q').value = first;
+            document.getElementById('search-bar').setAttribute("class", "top");
+            document.getElementById('logo-div').setAttribute("class", "logo-div-sm");
+            document.getElementById('search-form-div').setAttribute("class", "search-form-div-sm");
+            document.getElementById('q').setAttribute("class", "input-sm");
+            document.getElementById('work').setAttribute("class", "button-sm");
+            document.getElementById('hire').setAttribute("class", "button-sm");
+        }
+        
         var url = window.location.href;
         var vars = getURLVars(url);
         var first = vars["q"];
         var second = vars["t"];
         
-        if (first != null && second != null) 
-            document.getElementById('query').innerHTML = first + '<br>' + second;
+        if (first != null && second != null) {
+            makeTopSearchBar();
+        }
     </script>
 </html>
