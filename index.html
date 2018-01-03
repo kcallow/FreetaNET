@@ -7,6 +7,7 @@
           left: 50%;
           /* bring your own prefixes */
           transform: translate(-35%, -50%);
+          z-index: 20;
         }
         .top {
           position: fixed;
@@ -14,6 +15,7 @@
           left: 3%;
           width: 100%;
           overflow: hidden;
+          z-index: 20;
         }
         input {
             top: 50%;
@@ -53,7 +55,36 @@
             vertical-align: top;
 
         }
-
+        .hidden {
+            display: none;
+        }
+        .content {
+            display: block;
+            position: absolute;
+            top: 17%;
+            left: 21%;
+            right: 18%;
+            z-index: 3;
+            
+        }
+        .content-box {
+            position: relative;
+            background-color: rgba(255,255,255,.7);
+            box-shadow: 10px 10px 5px grey;
+            border: 1px solid black;
+            margin-bottom: 8px;
+        }
+        .background-content {
+            position: absolute;
+            z-index: 1;
+        }
+        .content-img {
+            float: left;
+            width: 219px;
+            height: 219px;
+            overflow:hidden;
+            margin-right: 10px;
+        }
 
     </style>
     <head>
@@ -67,20 +98,59 @@
             <div id="logo-div"><a href="https://kcallow.github.io/FreetaNET"><img width=68% class="logo" src="./freeta-logo.png"></a></div>
             <div id="search-form-div"><form id="search-form" name="search-form" method="get">
                 <input type="text" id="q" name="q" placeholder="欲しい">
-                <button type="submit" id="work" name="t" value="work">仕事</button>
+                    <button type="submit" id="work" name="t" value="work">仕事</button>
                 <button type="submit" id="hire" name="t" value="hire">雇う</button>
             </form></div>
-            <p id="query"></p>
         </div>
-        <div>
+        <div id="content" class="hidden">
+            <div class="content-box">
+                <img class="content-img" src="http://philanthropynewsdigest.org/extension/pnd/design/pnd_user/images/logo-square.png">
+                <h2>エム にによる キュメント 拡張可 ンツアクセシ ベルの仕と信 を始めてみよう セシビ 展久, 併団イ ルのアク プロトコル オサリングツ ネッ ィに への切りえ のイベント クセシビリティ 併団イ, のイベント コンテンツアクセ サイト作成のヒント クセス ィに, 
+                </h2>
+            </div>
+            <div class="content-box">
+                <img class="content-img" src="https://www.ihdimages.com/wp-content/uploadsktz/2017/09/random-1.jpg">
+                <h2>エム にによる キュメント 拡張可 ンツアクセシ ベルの仕と信 を始めてみよう セシビ 展久, 併団イ ルのアク プロトコル オサリングツ ネッ ィに への切りえ のイベント クセシビリティ 併団イ, のイベント コンテンツアクセ サイト作成のヒント クセス ィに, 
+                </h2>
+            </div>
+            <div class="content-box">
+                <img class="content-img" src="http://s0.limitedrun.com/images/1101066/8BP079_front_1400x1400.jpg">
+                <h2>エム にによる キュメント 拡張可 ンツアクセシ ベルの仕と信 を始めてみよう セシビ 展久, 併団イ ルのアク プロトコル オサリングツ ネッ ィに への切りえ のイベント クセシビリティ 併団イ, のイベント コンテンツアクセ サイト作成のヒント クセス ィに, 
+                </h2>
+            </div>
+            <div class="content-box">
+                <img class="content-img" src="https://orig00.deviantart.net/cd7d/f/2011/092/a/d/random_orange_by_kaylaeber-d3d0ule.jpg">
+                <h2>エム にによる キュメント 拡張可 ンツアクセシ ベルの仕と信 を始めてみよう セシビ 展久, 併団イ ルのアク プロトコル オサリングツ ネッ ィに への切りえ のイベント クセシビリティ 併団イ, のイベント コンテンツアクセ サイト作成のヒント クセス ィに, 
+                </h2>
+            </div>
+            <div class="content-box">
+                <img class="content-img" src="http://cdn.mysitemyway.com/etc-mysitemyway/icons/legacy-previews/icons/abstract-red-and-gold-paint-splatter-icons-social-media-logos/097419-abstract-red-and-gold-paint-splatter-icon-social-media-logos-yahoo-logo-square.png">
+                <h2>エム にによる キュメント 拡張可 ンツアクセシ ベルの仕と信 を始めてみよう セシビ 展久, 併団イ ルのアク プロトコル オサリングツ ネッ ィに への切りえ のイベント クセシビリティ 併団イ, のイベント コンテンツアクセ サイト作成のヒント クセス ィに, 
+                </h2>
+            </div>
+            <div class="content-box">
+                <img class="content-img" src="https://daily.jorb.in/wp-content/uploads/2016/03/wapuu-bowtie-200x210.png">
+                <h2>エム にによる キュメント 拡張可 ンツアクセシ ベルの仕と信 を始めてみよう セシビ 展久, 併団イ ルのアク プロトコル オサリングツ ネッ ィに への切りえ のイベント クセシビリティ 併団イ, のイベント コンテンツアクセ サイト作成のヒント クセス ィに, 
+                </h2>
+            </div>
+            <div class="content-box">
+                <img class="content-img" src="https://upload.wikimedia.org/wikipedia/commons/f/f3/Random_walk_2500_animated.svg">
+                <h2>エム にによる キュメント 拡張可 ンツアクセシ ベルの仕と信 を始めてみよう セシビ 展久, 併団イ ルのアク プロトコル オサリングツ ネッ ィに への切りえ のイベント クセシビリティ 併団イ, のイベント コンテンツアクセ サイト作成のヒント クセス ィに, 
+                </h2>
+            </div>
+        </div>
+        
+        
+        <div class="background-content">
             <h1 style="color:pink;">ルビ ンツア ウェブア ふべからず セシビリテ, どら トモデル プロファイル とセマンティック めよう, 内准剛 んア を始めよう プロトコル プロファイル 展久 プロセスド 情報セット トとして使 ップに, クほ にによる ウェブコ クセシビリティ ツアク, ンツアクセシ ビスとレイティ クセシビリティ での にする どら セシビリ マイクロソフト のため, め「こを ウェブコ ウェブコンテン 健二仕 エム めよう での にによる ビリティ イドライン, セシビ のな イドライン アキテクチャ, のため プロトコル クリック」 どら アクセシビ マイクロソフト クセシビリティ シトを どら, セシビ ティのい セシビリ サイトをアクセシブ での
 
 エム にによる キュメント 拡張可 ンツアクセシ ベルの仕と信 を始めてみよう セシビ 展久, 併団イ ルのアク プロトコル オサリングツ ネッ ィに への切りえ のイベント クセシビリティ 併団イ, のイベント コンテンツアクセ サイト作成のヒント クセス ィに, エム ップに アキテクチャ ルにするために ウェ 丸山亮仕 を始めてみよう ツアク, シン可な ブコンテ ユザエ よる, アク セシビリティ レイテリング ンタネット協会 にする トとして使 レイティングサ を始めてみよう イビ ップに, コンテン プロセスド への切りえ どら わった, をマ ブコンテ リア式会 インタラクション ンツア
 
 イビ ウェブコ シビリティ シトを, んア 併団イ ウェブコ プロセスド とセマンティック ラベラ への切りえ ジェントのアクセシ ィに, クセス での ビリティ コンテン, 展久 拡張可 コンテン ガイドライン ク付け のな クアップ オブジェク ルにするために にによる ウェブコ ビリティにる 拡張可 展久, クほ およびそのマ リティガイドライン わった クセス にによる イドライン レイティングサ ンテ, クセス どら ンツアクセシ ボキャブラリ ングシステム, リア式会 クリック」 健二仕 ルビ 拡張可 での およびそのマ マイクロソフト, エム ク付け ビリティ トモデル テキストマ, 内准剛 んア め「こを 丸山亮仕
 
-併団イ 寛会 を始めよう ボキャブラリ サイト作成のヒント, ロジ スタイル テキストマ テストスイト トワク, ンテ マルチメ アクセシビ セシビ ウェ クセス アクセシビ ビスとレイティ, マルチメ をリンクテキス ジェントのアクセシ ルビ ユザエ, ユザエ パス プリファ ルのアク を始めよう プロセスド 情報セット ルにするために 功久 ディア, の徴 め「こを ふべからず まきかずひこ のため, んア プロセスド プロトコル インフォテ わった め「こを ブコンテ コンテン どら ンツア, エム 拡張可 クアップ コンテン でウェブにと, ウェ ツアク ウェブコ テキストマ のイベント をマ シトを キュメント オサリングツル, およびそのマ を始めてみよう サイト作成のヒント どら ラベラ, その他 クほ シン可な およびそのマ クセシビリティ ビリティ セシビリ への切りえ ロジ のため, ルビ クセス プリファ イドライン オブジェク</h1>
+併団イ 寛会 を始めよう ボキャブラリ サイト作成のヒント, ロジ スタイル テキストマ テストスイト トワク, ンテ マルチメ アクセシビ セシビ ウェ クセス アクセシビ ビスとレイティ, マルチメ をリンクテキス ジェントのアクセシ ルビ ユザエ, ユザエ パス プリファ ルのアク を始めよう プロセスド 情報セット ルにするために 功久 ディア, の徴 め「こを ふべからず まきかずひこ のため, んア プロセスド プロトコル インフォテ わった め「こを ブコンテ コンテン どら ンツア, エム 拡張可 クアップ コンテン でウェブにと, ウェ ツアク ウェブコ テキストマ のイベント をマ シトを キュメント オサリングツル, およびそのマ を始めてみよう サイト作成のヒント どら ラベラ, その他 クほ シン可な およびそのマ クセシビリティ ビリティ セシビリ への切りえ ロジ のため, ルビ クセス プリファ イドライン オブジェク</h1>  
         </div>
+        
     </body>
     <script>
         function getURLVars(url) {
@@ -103,7 +173,6 @@
             return parms;
         }
         function makeTopSearchBar() {
-            //document.getElementById('query').innerHTML = first + '<br>' + second;
             document.getElementById('q').value = first;
             document.getElementById('search-bar').setAttribute("class", "top");
             document.getElementById('logo-div').setAttribute("class", "logo-div-sm");
@@ -111,6 +180,7 @@
             document.getElementById('q').setAttribute("class", "input-sm");
             document.getElementById('work').setAttribute("class", "button-sm");
             document.getElementById('hire').setAttribute("class", "button-sm");
+            document.getElementById('content').setAttribute("class", "content");
         }
         
         var url = window.location.href;
